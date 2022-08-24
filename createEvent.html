@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/tailwind.min.js"></script>
+    <title>Create Events</title>
+  </head>
+  <body>
+    <header
+      class="flex justify-between items-center h-20 shadow-md p-5 fixed z-auto top-0 right-0 left-0 w-full bg-white"
+    >
+      <p class="text-lg font-bold">Web3 <span>Tiket</span></p>
+      <button class="bg-orange-500 p-2 rounded-full py-3 px-4 text-white">
+        Connect wallet
+      </button>
+    </header>
+    <div
+      class="flex justify-center items-center flex-col flex-wrap p-6 w-full mx-auto mt-20"
+    >
+      <div
+        class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-50 transform z-50 transition-transform duration-300 scale-100"
+      >
+        <div
+          class="bg-white shadow-lg shadow-[#010125] rounded-xl w-11/12 md:w-2/5 h-7/12 p-6"
+        >
+          <form class="flex flex-col">
+            <div class="flex flex-row justify-between items-center">
+              <p class="font-semibold text-gray-400">Create Event</p>
+              <button
+                type="button"
+                class="border-0 bg-transparent focus:outline-none"
+              >
+                <FaTimes class="text-gray-400" />
+              </button>
+            </div>
+
+            <div
+              class="flex flex-row justify-center items-center rounded-xl mt-5"
+            >
+              <div class="shrink-0 rounded-xl overflow-hidden h-20 w-20">
+                <img src="/images/pic-1.png" alt="">
+              </div>
+            </div>
+
+            <div
+              class="flex flex-row justify-between items-center bg-gray-300 rounded-xl mt-5"
+            >
+              <label class="block">
+                <span class="sr-only">Choose profile photo</span>
+                <input
+                  type="file"
+                  accept="image/png, image/gif, image/jpeg, image/webp"
+                  class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-gray-500 cursor-pointer focus:ring-0 focus:outline-none"
+                  onChange="{onChange}"
+                  required
+                />
+              </label>
+            </div>
+
+            <div
+              class="flex flex-row justify-between items-center bg-gray-300 rounded-xl mt-5 p-2"
+            >
+              <input
+                class="block w-full text-sm text-slate-500 bg-transparent border-0 focus:outline-none focus:ring-0"
+                type="text"
+                name="title"
+                placeholder="Title"
+                required
+              />
+            </div>
+
+            <div
+              class="flex flex-row justify-between items-center bg-gray-300 rounded-xl mt-5 p-2"
+            >
+              <input
+                class="block w-full text-sm text-slate-500 bg-transparent border-0 focus:outline-none focus:ring-0"
+                type="number"
+                step="0.01"
+                min="0.01"
+                name="price"
+                placeholder="Price (Eth)"
+                required
+              />
+            </div>
+
+            <div
+              class="flex flex-row justify-between items-center bg-gray-300 rounded-xl mt-5"
+            >
+              <textarea
+                class="block w-full text-sm resize-none text-slate-500 bg-transparent border-0 focus:outline-none focus:ring-0 h-20"
+                type="text"
+                name="description"
+                placeholder="Description"
+                required
+              >
+              </textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="flex flex-row justify-center items-center w-full text-white text-md bg-orange-500 hover:bg-[#bd255f] py-2 px-5 rounded-full drop-shadow-xl border border-transparent hover:bg-transparent hover:text-orange-500 hover:border hover:border-orange-500 focus:outline-none focus:ring mt-5"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

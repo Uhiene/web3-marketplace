@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/tailwind.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="flex justify-between items-center h-20 shadow-md p-5 fixed z-auto top-0 right-0 left-0 w-full bg-white">
+        <p class="text-lg font-bold">Web3 <span>Tiket</span></p>
+        <button class="bg-orange-500 p-2 rounded-full py-3 px-4 text-white ">Connect wallet</button>
+    </header>
+    <div class="flex justify-center items-center flex-col flex-wrap p-6  sm:w-4/5 md:5/6 w-full mx-auto mt-20 ">
+        <div class="flex justify-between items-center w-full ">
+            <span
+                class="rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center cursor-pointer active:bg-gray-300 transition duration-300 ease w-max">
+                <img class="rounded-full w-9 h-9 max-w-none" alt="A"
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" />
+                <span class="flex items-center px-3 py-2">
+                    0xfe...1e2   
+                </span>
+            </span>
+            <button class="bg-[#01012d]  rounded-full py-1 px-5  text-white ">Exist</button>
+        </div>
+        <div id="messages-container" class="w-full py-4 mt-4 h-[calc(100vh_-_16rem)] overflow-y-auto sm:px-2 ">
+            <div class="flex justify-start w-full">
+                <div class="flex flex-col">
+                    <div class="flex flex-col  justify-center items-start bg-orange-300 rounded-full py-2 px-4 shadow-md">
+                        <small class="font-bold text-wrap">how much is the ticket currently sold</small>
+                        <span>@0xfe...1e2</span>
+                    </div>
+                    <small>28/06/22 12:05pm </small>
+                </div>    
+            </div>
+            <div class="flex justify-end w-full ">
+                <div class="flex flex-col">
+                    <div class="flex flex-col  justify-center items-start bg-gray-300 rounded-full py-2 px-4 shadow-md">
+                        <small class="font-bold text-wrap">how much is the ticket currently sold</small>
+                        <span>@you</span>
+                    </div>
+                    <small>28/06/22 1:05am </small>
+                </div>
+            </div>
+        </div>
+        <form class="flex w-full">
+            <input type="text " class="w-full bg-gray-200 rounded-lg p-4 focus:ring-0 focus:outline-none border-gray-500" placeholder="send message... " required>
+            <button type="submit" hidden> </button>
+        </form>
+    </div>
+</body>
+</html>
